@@ -17,6 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <link href="https://fonts.googleapis.com/css2?family=Crisp+Aeonik+Pro&display=swap" rel="stylesheet"/>
+      <link
+            href="https://fonts.googleapis.com/css2?family=Crisp+Aeonik+Pro&display=swap"
+            rel="stylesheet"
+          />
+      </head>
       <body>
         <Header />
         {children}
