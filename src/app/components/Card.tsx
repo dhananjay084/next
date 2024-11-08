@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image'; // Import the Image component from Next.js
+import Image from 'next/image';
 
 interface Cards {
   icon: string;
@@ -9,7 +9,7 @@ interface Cards {
 
 const Card = ({ icon, title, description }: Cards) => {
   const [isVisible, setIsVisible] = useState(false);
-  const cardRef = useRef(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,19 +18,21 @@ const Card = ({ icon, title, description }: Cards) => {
           if (entry.isIntersecting) {
             setIsVisible(true); // Set visibility when the card enters the viewport
           }
-          
         });
       },
       { threshold: 0.1 }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+    // Store the current reference in a local variable
+    const currentCardRef = cardRef.current;
+
+    if (currentCardRef) {
+      observer.observe(currentCardRef);
     }
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
+      if (currentCardRef) {
+        observer.unobserve(currentCardRef);
       }
     };
   }, []);
@@ -52,10 +54,10 @@ const Card = ({ icon, title, description }: Cards) => {
           className="rounded-full filter grayscale group-hover:grayscale-0 transition-all duration-300"
         />
       </div>
-      <h3 className="text-lg font-semibold text-grayscale group-hover:text-blue-800 mb-2">
+      <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-800 mb-2">
         {title}
       </h3>
-      <p className="text-gray-600 ">{description}</p>
+      <p className="text-gray-600">{description}</p>
       <div className="h-1 mt-3 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></div>
     </div>
   );

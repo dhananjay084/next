@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Buy_domain from "@public/buy_domian.svg";
+import Buy_domain from '@public/buy_domian.svg';
 import { Card } from 'react-bootstrap';
 import 'animate.css';
 
-const left_image = () => {
+const LeftImage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const leftImageRef = useRef(null);
 
@@ -20,13 +20,16 @@ const left_image = () => {
       { threshold: 0.1 }
     );
 
-    if (leftImageRef.current) {
-      observer.observe(leftImageRef.current);
+    // Store the current reference in a local variable
+    const currentRef = leftImageRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (leftImageRef.current) {
-        observer.unobserve(leftImageRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -81,4 +84,4 @@ const left_image = () => {
   );
 };
 
-export default left_image
+export default LeftImage;

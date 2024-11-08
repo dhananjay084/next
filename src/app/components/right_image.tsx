@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Investor from "@public/investor.svg";
+import Investor from '@public/investor.svg';
 import { Card } from 'react-bootstrap';
 import 'animate.css'; // Ensure animate.css is included
 
@@ -20,13 +20,16 @@ const LeftImage = () => {
       { threshold: 0.1 }
     );
 
-    if (leftImageRef.current) {
-      observer.observe(leftImageRef.current);
+    // Capture the current reference in a local variable
+    const currentRef = leftImageRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (leftImageRef.current) {
-        observer.unobserve(leftImageRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

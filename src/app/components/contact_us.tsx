@@ -8,7 +8,7 @@ import 'animate.css'; // Ensure animate.css is included
 
 const LeftImage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const leftImageRef = useRef(null);
+  const leftImageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,13 +22,16 @@ const LeftImage = () => {
       { threshold: 0.1 }
     );
 
-    if (leftImageRef.current) {
-      observer.observe(leftImageRef.current);
+    // Store the current reference in a local variable
+    const currentRef = leftImageRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (leftImageRef.current) {
-        observer.unobserve(leftImageRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
