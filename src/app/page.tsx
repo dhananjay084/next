@@ -69,141 +69,225 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative w-full  bg-[#B9DEFF] flex items-center justify-center flex-col pt-[100px]">
-        <Image
-          src={Clouds}
-          alt="Clouds"
-          className="absolute top-[-45%] left-0 w-full object-cover animate-on-scroll"
-        />
-
-        <div className="absolute top-[10%] left-0 w-[40%] md:w-[30%] animate-on-scroll">
-          <Image src={LeftImage} alt="Left Image" className="w-full h-auto" />
-        </div>
-        <div className="absolute top-[10%] right-0 w-[40%] md:w-[30%] animate-on-scroll">
-          <Image src={RightImage} alt="Right Image" className="w-full h-auto" />
-        </div>
-
-        <div className="absolute bottom-0 left-0 w-[40%] md:w-[30%] animate-on-scroll z-50">
-          <Image src={LeftScene} alt="Left Scene" className="w-full h-auto" />
-        </div>
-        <div className="absolute bottom-0 right-0 w-[40%] md:w-[30%] animate-on-scroll z-50">
-          <Image src={RightScene} alt="Right Scene" className="w-full h-auto" />
-        </div>
-
-        <div className="z-10 text-center px-6 animate-on-scroll animate__zoomIn max-w-[40%]">
-          <div className='mb-[20px] bg-[#1972f51a] border border-[#1972f5] rounded-[100px] max-w-fit flex justify-center items-center mx-auto py-[7px] px-[9px] text-[#1972f5] font-normal'>
-            <span className='bg-[#1972f5] text-[#fff] rounded-[100px] px-[8px] mr-[4px]'>NEW</span>
-            The new Crisp v4 is out!
-            <MdKeyboardArrowRight />
-          </div>
-          <h2 className="text-4xl md:text-[48px] font-normal leading-[56px] text-black mb-[20px]">
-            The future of customer support is here
-          </h2>
-          <p className='mb-[20px]'>The all-in-one AI-powered business messaging platform that gathers teams, conversations, data and knowledge, around one place.</p>
-          {/* <div className="relative w-full mt-6 md:mt-8 animate-on-scroll animate__fadeInUp">
-            <input
-              type="search"
-              className="border border-[#1972f5] rounded-[25px] py-4 px-8 w-full pr-12"
-              placeholder="Search"
-            />
-            <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-[#1972f5] p-4 rounded-[20px]">
-              <CiSearch />
-            </span>
-          </div> */}
-          <span className='flex items-center gap-[5%] justify-center'>
-            <button className='bg-custom-gradient border border-[#3d7fde] text-white py-[10px] px-[20px] rounded-[14px]'>Use Crisp for free</button>
-            <button className='flex items-center bg-white border text-black py-[10px] px-[20px] rounded-[14px]'>
-              <MdPlayCircleOutline />What is Crisp?
-            </button>
-          </span>
-        </div>
-        <div className='max-w-[60%] z-40 mx-auto  mt-[20px] border-[5px] border-grey rounded-[20px] relative'>
-          <span className='bg-white text-black rounded-full p-6 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] shadow-2xl border border-white'>< MdOutlinePlayArrow /></span>
-          <Image src={Banner_Image} alt={''} className='rounded-[16px]' />
-        </div>
-      </div>
-      <h2 className='text-center text-[46px] leading-[56px] max-w-[50%] mx-auto mt-[100px]'>Meet the workspace that delights your <span className='text-[#1972f5]'>teams</span> & <span className='text-[#1972f5]'>customers</span></h2>
-      <div className=' mt-24 max-w-[95%] md:max-w-[85%] animate-on-scroll animate__fadeInUp mx-auto flex justify-between'>
-        <div className='bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] max-w-[49%]'>
-          <div className='p-4'><p className='flex text-[#1972f5] items-center gap-[10px] '><GoInbox /> Inbox</p>
-            <p className='my-[20px] text-[20px]'>Centralize your inbound messages</p>
-            <p className='text-[#5d6b98]'>Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.</p>
-            <p className='flex text-[#1972f5] items-center gap-[10px] mt-[20px] '>Learn More<FaChevronRight /> </p></div>
-
-          <Image src={Teams} alt='' />
-        </div>
-        <div className='bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] max-w-[49%] flex flex-col justify-between'>
-          <div className='p-4'>
-            <p className='flex text-[#1972f5] items-center gap-[10px] '><GoInbox /> Inbox</p>
-            <p className='my-[20px] text-[20px]'>Centralize your inbound messages</p>
-            <p className='text-[#5d6b98]'>Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.</p>
-            <p className='flex text-[#1972f5] items-center gap-[10px] mt-[20px] '>Learn More<FaChevronRight /> </p>
-          </div>
-          <Image src={Customer} alt='' className='flex-end' />
-        </div>
-      </div>
-      <div className='bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] max-w-[95%] md:max-w-[85%] mx-auto my-4 flex'>
-          <div className='p-4'><p className='flex text-[#1972f5] items-center gap-[10px] '><GoInbox /> Inbox</p>
-            <p className='my-[20px] text-[20px]'>Centralize your inbound messages</p>
-            <p className='text-[#5d6b98]'>Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.</p>
-            <p className='flex text-[#1972f5] items-center gap-[10px] mt-[20px] '>Learn More<FaChevronRight /> </p></div>
-
-          <Image src={CustomerData} alt='' />
-        </div>
-        <div className=' max-w-[95%] md:max-w-[85%] animate-on-scroll animate__fadeInUp mx-auto flex justify-between'>
-        <div className='bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] max-w-[49%]'>
-          <div className='p-4'><p className='flex text-[#1972f5] items-center gap-[10px] '><GoInbox /> Inbox</p>
-            <p className='my-[20px] text-[20px]'>Centralize your inbound messages</p>
-            <p className='text-[#5d6b98]'>Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.</p>
-            <p className='flex text-[#1972f5] items-center gap-[10px] mt-[20px] '>Learn More<FaChevronRight /> </p></div>
-
-          <Image src={Flow} alt='' />
-        </div>
-        <div className='max-w-[49%] flex flex-col justify-between'>
-        <div className='bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5]  flex flex-col'>
-          <div className='p-4'>
-            <p className='flex text-[#1972f5] items-center gap-[10px] '><GoInbox /> Inbox</p>
-            <p className='my-[20px] text-[20px]'>Centralize your inbound messages</p>
-            <p className='text-[#5d6b98]'>Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.</p>
-            <p className='flex text-[#1972f5] items-center gap-[10px] mt-[20px] '>Learn More<FaChevronRight /> </p>
-          </div>
-          <Image src={Chat} alt='' className='flex-end' />
-        </div>
-        <div className='bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5]  flex flex-col'>
-          <div className='p-4'>
-            <p className='flex text-[#1972f5] items-center gap-[10px] '><GoInbox /> Inbox</p>
-            <p className='my-[20px] text-[20px]'>Centralize your inbound messages</p>
-            <p className='text-[#5d6b98]'>Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.</p>
-            <p className='flex text-[#1972f5] items-center gap-[10px] mt-[20px] '>Learn More<FaChevronRight /> </p>
-          </div>
-        </div>
-        </div>
-      </div>
-      <div className="flex flex-col justify-center items-center mt-40 max-w-[95%] md:max-w-[85%] border-2 border-white shadow-[0_0_0_1px_#eaecf5] bg-[#fcfcfd] mx-auto rounded-[25px] relative animate-on-scroll animate__fadeInUp p-16">
-        <Image
-          src={Robot1}
-          alt="robot"
-          className="max-w-[250px] md:max-w-[400px] absolute animate-on-scroll animate__bounceIn top-[-10%]"
-        />
-<h2 className='text-[40px] leading-[48px] max-w-[60%] max-auto text-center mb-8'>Built for customer support,<br/> marketing, and sales. <span className='text-[#1972f5]'>All together.</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[90%] md:max-w-[80%] mx-auto mb-8">
-          {cardsData.map((card, index) => (
-            <Custom_Card key={index} icon={card.icon} title={card.title} description={card.description} />
-          ))}
-
-        
-        </div>
-        <Image src={Banner_Image} alt={''} className='rounded-[16px]' />
+      <div className="relative w-full bg-[#B9DEFF] flex items-center justify-center flex-col pt-[100px]">
   <Image
-            src={Robot2}
-            alt="robot"
-            className="max-w-[250px] md:max-w-[400px] absolute animate-on-scroll animate__bounceIn bottom-[-5%] left-0"
-          />
+    src={Clouds}
+    alt="Clouds"
+    className="absolute top-[-45%] left-0 w-full object-cover animate-on-scroll"
+  />
+
+  {/* Left and Right Images on Top */}
+  <div className="absolute top-[10%] left-0 w-[40%] md:w-[30%] animate-on-scroll hidden sm:block">
+    <Image src={LeftImage} alt="Left Image" className="w-full h-auto" />
+  </div>
+  <div className="absolute top-[10%] right-0 w-[40%] md:w-[30%] animate-on-scroll hidden sm:block">
+    <Image src={RightImage} alt="Right Image" className="w-full h-auto" />
+  </div>
+
+  {/* Left and Right Scenes on Bottom */}
+  <div className="absolute bottom-0 left-0 w-[40%] md:w-[30%] animate-on-scroll z-50 hidden sm:block">
+    <Image src={LeftScene} alt="Left Scene" className="w-full h-auto" />
+  </div>
+  <div className="absolute bottom-0 right-0 w-[40%] md:w-[30%] animate-on-scroll z-50 hidden sm:block">
+    <Image src={RightScene} alt="Right Scene" className="w-full h-auto" />
+  </div>
+
+  {/* Main Content */}
+  <div className="z-10 text-center px-4 sm:px-6 animate-on-scroll animate__zoomIn max-w-full sm:max-w-[60%] lg:max-w-[40%]">
+    {/* New Crisp v4 Notification */}
+    <div className='mb-[10px] sm:mb-[20px] bg-[#1972f51a] border border-[#1972f5] rounded-full max-w-fit flex justify-center items-center mx-auto py-[5px] sm:py-[7px] px-[7px] sm:px-[9px] text-[#1972f5] font-normal text-sm sm:text-base'>
+      <span className='bg-[#1972f5] text-white rounded-full px-[6px] sm:px-[8px] mr-[2px] sm:mr-[4px] text-xs sm:text-sm'>NEW</span>
+      The new Crisp v4 is out!
+      <MdKeyboardArrowRight />
+    </div>
+
+    {/* Main Heading */}
+    <h2 className="text-2xl sm:text-4xl md:text-[48px] font-normal leading-[32px] sm:leading-[56px] text-black mb-[10px] sm:mb-[20px]">
+      The future of customer support is here
+    </h2>
+
+    {/* Description Text */}
+    <p className="text-sm sm:text-base mb-[15px] sm:mb-[20px]">
+      The all-in-one AI-powered business messaging platform that gathers teams, conversations, data, and knowledge in one place.
+    </p>
+
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-[5%] justify-center">
+      <button className="bg-custom-gradient border border-[#3d7fde] text-white py-[8px] sm:py-[10px] px-[16px] sm:px-[20px] rounded-[10px] sm:rounded-[14px] text-sm sm:text-base">
+        Use Crisp for free
+      </button>
+      <button className="flex items-center bg-white border text-black py-[8px] sm:py-[10px] px-[16px] sm:px-[20px] rounded-[10px] sm:rounded-[14px] text-sm sm:text-base">
+        <MdPlayCircleOutline className="mr-1" /> What is Crisp?
+      </button>
+    </div>
+  </div>
+
+  {/* Banner Image with Play Button */}
+  <div className="w-full sm:max-w-[60%] z-40 mx-auto mt-[15px] sm:mt-[20px] border-[3px] sm:border-[5px] border-grey rounded-[10px] sm:rounded-[20px] relative">
+    <span className="bg-white text-black rounded-full p-3 sm:p-6 absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] shadow-2xl border border-white">
+      <MdOutlinePlayArrow />
+    </span>
+    <Image src={Banner_Image} alt="" className="rounded-[8px] sm:rounded-[16px]" />
+  </div>
+</div>
+
+<h2 className="text-center text-3xl sm:text-[46px] leading-8 sm:leading-[56px] max-w-[90%] sm:max-w-[50%] mx-auto mt-[50px] sm:mt-[100px]">
+  Meet the workspace that delights your <span className="text-[#1972f5]">teams</span> & <span className="text-[#1972f5]">customers</span>
+</h2>
+
+<div className="mt-12 sm:mt-24 max-w-[95%] md:max-w-[85%] animate-on-scroll animate__fadeInUp mx-auto flex flex-col sm:flex-row gap-6 sm:gap-0 sm:justify-between">
+  {/* Left Card */}
+  <div className="bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] w-full sm:max-w-[49%]">
+    <div className="p-4">
+      <p className="flex text-[#1972f5] items-center gap-[10px]">
+        <GoInbox /> Inbox
+      </p>
+      <p className="my-[10px] sm:my-[20px] text-lg sm:text-[20px]">
+        Centralize your inbound messages
+      </p>
+      <p className="text-[#5d6b98] text-sm sm:text-base">
+        Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.
+      </p>
+      <p className="flex text-[#1972f5] items-center gap-[10px] mt-[10px] sm:mt-[20px]">
+        Learn More <FaChevronRight />
+      </p>
+    </div>
+    <Image src={Teams} alt="Teams" className="w-full rounded-b-[25px]" />
+  </div>
+
+  {/* Right Card */}
+  <div className="bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] w-full sm:max-w-[49%] flex flex-col justify-between">
+    <div className="p-4">
+      <p className="flex text-[#1972f5] items-center gap-[10px]">
+        <GoInbox /> Inbox
+      </p>
+      <p className="my-[10px] sm:my-[20px] text-lg sm:text-[20px]">
+        Centralize your inbound messages
+      </p>
+      <p className="text-[#5d6b98] text-sm sm:text-base">
+        Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.
+      </p>
+      <p className="flex text-[#1972f5] items-center gap-[10px] mt-[10px] sm:mt-[20px]">
+        Learn More <FaChevronRight />
+      </p>
+    </div>
+    <Image src={Customer} alt="Customer" className="w-full rounded-b-[25px]" />
+  </div>
+</div>
+
+<div className="bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] max-w-[95%] md:max-w-[85%] mx-auto my-4 flex flex-col sm:flex-row">
+  <div className="p-4 flex-1">
+    <p className="flex text-[#1972f5] items-center gap-[10px]">
+      <GoInbox /> Inbox
+    </p>
+    <p className="my-[10px] sm:my-[20px] text-lg sm:text-[20px]">
+      Centralize your inbound messages
+    </p>
+    <p className="text-[#5d6b98] text-sm sm:text-base">
+      Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.
+    </p>
+    <p className="flex text-[#1972f5] items-center gap-[10px] mt-[10px] sm:mt-[20px]">
+      Learn More <FaChevronRight />
+    </p>
+  </div>
+  
+  <Image src={CustomerData} alt="Customer Data" className="w-full sm:w-[50%] rounded-b-[25px] sm:rounded-none sm:rounded-r-[25px]" />
+</div>
+
+<div className="max-w-[95%] md:max-w-[85%] animate-on-scroll animate__fadeInUp mx-auto flex flex-col md:flex-row justify-between">
+  {/* First Section */}
+  <div className="bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] w-full md:max-w-[49%] mb-4 md:mb-0">
+    <div className="p-4">
+      <p className="flex text-[#1972f5] items-center gap-[10px]">
+        <GoInbox /> Inbox
+      </p>
+      <p className="my-[20px] text-lg md:text-[20px]">Centralize your inbound messages</p>
+      <p className="text-[#5d6b98] text-sm md:text-base">
+        Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.
+      </p>
+      <p className="flex text-[#1972f5] items-center gap-[10px] mt-[20px]">
+        Learn More <FaChevronRight />
+      </p>
+    </div>
+    <Image src={Flow} alt="" className="w-full rounded-b-[25px] md:rounded-none md:rounded-r-[25px]" />
+  </div>
+
+  {/* Second Section with Two Inner Boxes */}
+  <div className="w-full md:max-w-[49%] flex flex-col gap-4">
+    {/* Inner Box 1 */}
+    <div className="bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] flex flex-col">
+      <div className="p-4">
+        <p className="flex text-[#1972f5] items-center gap-[10px]">
+          <GoInbox /> Inbox
+        </p>
+        <p className="my-[20px] text-lg md:text-[20px]">Centralize your inbound messages</p>
+        <p className="text-[#5d6b98] text-sm md:text-base">
+          Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.
+        </p>
+        <p className="flex text-[#1972f5] items-center gap-[10px] mt-[20px]">
+          Learn More <FaChevronRight />
+        </p>
       </div>
-      <h2 className='text-[#344055] text-[40px] leading-[48px] max-w-[50%] text-center mx-auto mt-32'>
-      600,000 companies have <br/>already made the move
-      </h2>
-      <div className='bg-black text-white shadow-2xl py-[6px] px-[18px] rounded-[12px] border border-black max-w-fit mx-auto mt-8'>See their testimonials</div>
+      <Image src={Chat} alt="" className="w-full rounded-b-[25px] md:rounded-none md:rounded-r-[25px]" />
+    </div>
+
+    {/* Inner Box 2 */}
+    <div className="bg-[#fcfcfd] rounded-[25px] border-2 border-white shadow-[0_0_0_1px_#eaecf5] flex flex-col">
+      <div className="p-4">
+        <p className="flex text-[#1972f5] items-center gap-[10px]">
+          <GoInbox /> Inbox
+        </p>
+        <p className="my-[20px] text-lg md:text-[20px]">Centralize your inbound messages</p>
+        <p className="text-[#5d6b98] text-sm md:text-base">
+          Centralize all your inbound conversations from emails, website chat, WhatsApp, Messenger, phone, and more into one collaborative inbox. This allows multiple team members to access, manage, and respond to messages efficiently.
+        </p>
+        <p className="flex text-[#1972f5] items-center gap-[10px] mt-[20px]">
+          Learn More <FaChevronRight />
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="flex flex-col justify-center items-center mt-20 md:mt-40 max-w-[95%] md:max-w-[85%] border-2 border-white shadow-[0_0_0_1px_#eaecf5] bg-[#fcfcfd] mx-auto rounded-[25px] relative animate-on-scroll animate__fadeInUp p-8 md:p-16">
+  {/* Top Robot Image */}
+  <Image
+    src={Robot1}
+    alt="robot"
+    className="max-w-[150px] sm:max-w-[200px] md:max-w-[250px] lg:max-w-[400px] absolute animate-on-scroll animate__bounceIn top-[-10%]"
+  />
+
+  {/* Heading */}
+  <h2 className="text-[24px] sm:text-[32px] md:text-[40px] leading-[30px] sm:leading-[40px] md:leading-[48px] max-w-[90%] md:max-w-[60%] mx-auto text-center mb-6 md:mb-8">
+    Built for customer support,<br className="hidden md:block" /> marketing, and sales. <span className="text-[#1972f5]">All together.</span>
+  </h2>
+
+  {/* Cards Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-[90%] md:max-w-[80%] mx-auto mb-6 md:mb-8">
+    {cardsData.map((card, index) => (
+      <Custom_Card key={index} icon={card.icon} title={card.title} description={card.description} />
+    ))}
+  </div>
+
+  {/* Bottom Banner Image */}
+  <Image src={Banner_Image} alt="" className="rounded-[16px] w-full mb-4 md:mb-0" />
+
+  {/* Bottom Robot Image */}
+  <Image
+    src={Robot2}
+    alt="robot"
+    className="max-w-[150px] sm:max-w-[200px] md:max-w-[250px] lg:max-w-[400px] absolute animate-on-scroll animate__bounceIn bottom-[-5%] left-0"
+  />
+</div>
+
+<h2 className="text-[#344055] text-[24px] sm:text-[32px] md:text-[40px] leading-[32px] sm:leading-[40px] md:leading-[48px] max-w-[90%] md:max-w-[50%] text-center mx-auto mt-16 md:mt-32">
+  600,000 companies have <br className="hidden md:block" /> already made the move
+</h2>
+
+<div className="bg-black text-white shadow-2xl py-2 px-4 sm:py-[6px] sm:px-[18px] rounded-[12px] border border-black max-w-fit mx-auto mt-4 sm:mt-8 text-center">
+  See their testimonials
+</div>
+
 
       {/* <LeftImageSection />
       <RightImageSection /> */}
